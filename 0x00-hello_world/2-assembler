@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILEL
+ gcc -S $CFILE
