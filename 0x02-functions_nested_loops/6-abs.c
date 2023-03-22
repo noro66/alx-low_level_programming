@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_sign - function to check for sign of number
+* _abs - function that absolute value of aninteger
 *
 * @c: is the int that will use for the argument of the function
 *
