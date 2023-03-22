@@ -7,12 +7,12 @@
 *
 * Return: 0
 */
-int jack_bauer(void)
+void jack_bauer(void)
 {
 	int hours = 0;
 	int minutes = 0;
 	int hours_remainder;
-	int mins_remaider;
+	int mins_remainder;
 
 	while (hours <= 23)
 	{
@@ -29,7 +29,6 @@ int jack_bauer(void)
 	_putchar('\n');
 	}
 	hours++;
-	minuts = 0;
-	}
-return: (0);
+	minutes = 0;
+}
 }
