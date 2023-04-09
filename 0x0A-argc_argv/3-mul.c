@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <strlib.h>
+
 /**
-* main - prints  number of arguments,
-* @argc: int.
-* @argv: int.
-* Return: 0 (Success).
+*main - print sum of 2 numbers.
+*@argc: number of command line argument.
+*@argv: pointer to an array of command line arguments.
+*Return: 0(Sucess), non-zero(fail).
 */
 
-int main(int argc, char const *argv[])
-
+int main(int argc, char *argv[])
 {
-	sum = 0;
+	int sum;
+
 	if (argc == 3)
 	{
 	sum = atoi(argv[1]) * atoi(argv[2]);
