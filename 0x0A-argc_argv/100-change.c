@@ -8,28 +8,43 @@
  * @argv: arguments
  * Return: 0
  */
-
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
-	int i, lcents = 0;
-	int money = atoi(argv[1]);
-	int cents [] = { 25, 10, 5, 2, 1 };
+	int total, count;
+	unsigned int i;
+	char *p;
+	int cents[] = {25, 10, 5, 2};
 
-	if (argc == 2)
+	if (argc != 2)
 	{
-	for (i = 0; i < 5; i++)
+		printf("Error\n");
+		return (1);
+	}
+
+	total = strtol(argv[1], &p, 10);
+	count = 0;
+
+	if (!*p)
 	{
-	if (money >= cents[i])
+		while (total > 1)
+		{
+			for (i = 0; i < sizeof(cents[i]); i++)
+			{
+				if (total >= cents[i])
+				{
+					count += total / cents[i];
+					total = total % cents[i];
+				}
+			}
+		}
+		if (total == 1)
+			count++;
+	}
+	else
 	{
-	lcents += money / cents[i];
-	money %= cents[i];
-	if (money % cents[i] == 0)
-	{
-	break;
+		printf("Error\n");
+		return (1);
 	}
-	}
-	}
-	printf("%d\n", lcents);
-	}
+
+	printf("%d\n", count);
 	return (0);
-}
