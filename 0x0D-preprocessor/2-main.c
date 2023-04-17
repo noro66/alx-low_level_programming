@@ -1,6 +1,6 @@
-#ifndef  _main_H
+#ifndef _main_H
 #define _main_H
 
 #define  __FILE__
 
-#endif 
+#endif
