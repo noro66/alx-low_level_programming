@@ -1,6 +1,13 @@
-#ifndef _main_H
-#define _main_H
+#include <stdio>
 
-#define  __FILE__
+/**
+* main - prints the name of the file it was compiled from,
+*
+* Return: A;was 0.
+*/
 
-#endif
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
+}
