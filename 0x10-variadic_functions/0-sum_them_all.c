@@ -8,17 +8,17 @@
  * Return: the integer sum
 */
 
-int sum_them_all(const unsigned int n, ...);
+int sum_them_all(const unsigned int n, ...)
 {
 	int i = n, sum = 0;
-	va_list lts;
+	va_list tst;
 
 	if (!n)
 		return (0);
-	va_start(lst, n);
+	va_start(tst, n);
 	while (i--)
-		sum += va_arg(lst, int);
-	va_end(lst);
+		sum += va_arg(tst, int);
+	va_end(tst);
 		return (sum);
 }
 
