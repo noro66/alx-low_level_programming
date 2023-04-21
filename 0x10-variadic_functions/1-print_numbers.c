@@ -12,6 +12,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list valist;
 	int i = n;
 
+	if (!n)
+	{
+		printf("\n");
+	return (0);
+	}
 	va_start(valist, n);
 
 	while (i--)
