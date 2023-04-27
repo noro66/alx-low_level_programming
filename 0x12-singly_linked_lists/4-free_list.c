@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * ree_list - function that frees a list_t .
+ * free_list - function that frees a list_t .
  * @head: ponter to the next node .
  *
  * Return :void.
