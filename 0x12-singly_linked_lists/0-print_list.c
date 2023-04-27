@@ -1,4 +1,4 @@
-#include "listsl.h"
+#include "lists.h"
 
 /**
  * _strlen - returns the lenth of the strings.
@@ -12,10 +12,11 @@ int _strlen(char *s)
 	int x;
 
 	if (!s)
-		return(0);
-	while  (s++)
+		return (0);
+
+	while (s++)
 		x++;
-		
+
 		return (x);
 }
 
@@ -28,11 +29,11 @@ int _strlen(char *s)
 
 size_t print_list(const list_t *h)
 {
-	size i;
+	size_t i;
 
 	while (h)
 	{
-		printf("[%d] %s\n", _srelen(h->str), h->str ? h->str : "(nil)");
+		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
 		h = h->next;
 		i++;
 	}
